@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration {
             $table->string('password');
             $table->string('phone');
             $table->string('country');
-            $table->integer('reg_number')->unique();
+            $table->string('reg_number')->unique();
             $table->foreignId('ref_id')->constrained('users');
             $table->rememberToken();
             $table->timestamps();

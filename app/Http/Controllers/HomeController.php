@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class HomeController extends Controller
 {
     /**
@@ -27,20 +28,24 @@ class HomeController extends Controller
     {
         $users = User::getUsers('referrals');
 
-        // $users->referrals();
-        // dd($users);
-        // dd($users->auth()->user()->getUsers);
-        // Auth::user()->getUsers();
-        // $users->count();
-        // dd($users->count());
 
-        // dd($users->referrals);
-
-        // dd($users);
-        
         return view('home', [
             'users' => $users
         ]);
     }
+
+
+
+    // public function getcountry(){
+    //    $countries = new Countries();
+
+    //    $allCountry =  $countries->all()->pluck('name.common')->toArray();
+
+    //     return view('auth.register', [
+    //         'allCountry' => $allCountry,
+    //     ]);
+    // }
+
+
 
 }

@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+ use PragmaRX\Countries\Package\Countries;
 
 class RegisterController extends Controller
 {
@@ -92,6 +93,12 @@ class RegisterController extends Controller
          session(['referrer' => $request->query('ref')]);
         }
 
-        return view('auth.register');
+         $countries = new Countries();
+
+       $allCountry =  $countries->all()->pluck('name.common')->toArray();
+
+        return view('auth.register', [
+            'allCountry' => $allCountry,
+        ]);
     }
 }
