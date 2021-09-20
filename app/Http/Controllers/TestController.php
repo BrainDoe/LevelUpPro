@@ -12,16 +12,9 @@ class TestController extends Controller
     {
         // $myDownline = User::getUsers();
         $allUsers = User::whereNull('ref_id')->with(['children'])->get();
-        // $allUsers = User::get();
-
-
-        // dd($allUsers);
 
         return view('Testing.index', [
-            // 'mydownline' => $myDownline,
-                // 'allUsers' => $allUsers
                 'allUsers' => $allUsers
-            // 'ref' => $ref
         ]);
     }
 

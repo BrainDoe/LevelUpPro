@@ -43,13 +43,19 @@
                             <label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
 
                             <div class="col-md-6">
-                                <input id="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" required autocomplete="country">
-
+                               <select id="inputState" class="form-control" name="country">
+                                  <option selected>Select Country</option>
+                                     @foreach ($allCountry as $country)
+                                         <option value={{$country}} required>{{$country}}</option>
+                                     @endforeach
+                                    
+                                </select>
                                 @error('country')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+
                             </div>
                         </div>
 
@@ -99,6 +105,8 @@
                                 <input id="reg_number" type="text" class="form-control" name="reg_number" value="{{ $reg_number }}">
                             </div>
                         </div>
+
+                     
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

@@ -27,8 +27,6 @@ class User extends Authenticatable
 
     public function getReferralLinkAttribute() {
         return $this->referral_link = route('register', ['ref' => $this->reg_number]);
-
-        // dd($this->referral_link);
     }
 
 

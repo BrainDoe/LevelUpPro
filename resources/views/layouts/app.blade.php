@@ -9,22 +9,22 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary shadow-sm fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                   <img src={{ asset('images/pp.png') }} height="70px" class="rounded" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -40,18 +40,27 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <li class="nav-item mr-3">
+                                    <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
                                 </li>
-                            @endif
-                        @else
+                                <li class="nav-item mr-3">
+                                    <a class="nav-link" href="{{ url('/') }}">{{ __('How it works') }}</a>
+                                </li>
+                                <li class="nav-item mr-3">
+                                    <a class="nav-link" href="{{ url('/') }}">{{ __('FAQ') }}</a>
+                                </li>
+                                <li class="nav-item mr-3">
+                                    <a class="nav-link" href="{{ url('/') }}">{{ __('contact Us') }}</a>
+                                </li>
+                                 <li class="nav-item mr-3">
+                                    <a class="btn btn-danger" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-danger" href="{{ route('login') }}">{{ __('Sign In') }}</a>
+                                </li>
+                            @endguest
+                            @auth
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -69,7 +78,7 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest
+                             @endauth
                     </ul>
                 </div>
             </div>
@@ -79,5 +88,7 @@
             @yield('content')
         </main>
     </div>
+       <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>

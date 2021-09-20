@@ -27,3 +27,6 @@ Route::get('/register/{reg_number}', [App\Http\Controllers\HomeController::class
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/register', [App\Http\Controllers\HomeController::class, 'getcountry']);
+
+
