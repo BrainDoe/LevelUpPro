@@ -71,7 +71,7 @@
          <div class="details mb-3 float-right">
           <span class="title">Step 3</span>
         </div>
-        <p class="heading-text text-dark pt-5 text-primary">The receiver has up to 6 hours to confirm payment from the time payment proof has been submitted. If receiver fails to APPROVE or DECLINE the payment within 6 hours, the receiver account will be automatically blocked for breach of Betaprofitss terms & condition.</p>
+        <p class="heading-text text-dark pt-5 text-primary">The receiver has up to 6 hours to confirm payment from the time payment proof has been submitted. If receiver fails to APPROVE or DECLINE the payment within 6 hours, the receiver account will be automatically blocked for breach of LevelUp terms & condition.</p>
       </section>
     </div>
     <div class="row row-2">
@@ -262,18 +262,62 @@
          </div>
       </div>
       <div class="card-income-text py-3">
-        <p class="text-center heading-text2">Your Total Income: ₦436,900,000 every 60 days <br>
+        <p class="text-center heading-text2">Your Total Income: ₦436,900,000 every 60 days
            Net Profit: ₦ 436,880,000 Per 60days <br>
           Net Profit: ₦ 2.6Billion Per year</p>
       </div>
       </div>
     </section>
     <section class="advantage mt-5">
-        <div class="row">
-           <div class="col-md- mx-auto">
+        <div class="row pb-5">
+           <div class="col-md-6 mx-auto">
                <span class="border-bottom heading-title py-3">Advantages</span>
            </div>
         </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="row pb-5">
+                <div class="col-md-4 pb-4">
+                   <h6 class="text-white heading-advantage text-right">No Risk</h6>
+                </div>
+                <div class="col-md-8 border-left-advantage">
+                   <p class="text-white text-advantage">You will be required to pay a one time payment of N10,000, all other payment will be a fraction from profits earned. LevelUp is licensed in 3 countries (Belize, Costa Rica, Alberta) and operational in various countries around the world.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 pb-4">
+                   <h6 class="text-white heading-advantage text-right">Spill Overs</h6>
+                </div>
+                <div class="col-md-8 border-left-advantage mx-auto">
+                   <p class="text-white text-advantage">Referrals from those above you are distributed evenly to all active participants. This process allows active participants to benefit from efforts from those above and below them.</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-2 d-flex flex-column justify-content-center">
+              <img src={{ asset("images/logo.png") }} class="img-fluid" alt="">
+          </div>
+          <div class="col-md-5">
+            <div class="row pb-5">
+                <div class="col-md-8 border-right-advantage pb-4">
+                   <p class="text-white text-advantage">LevelUp does not hold funds, all payments are sent 100% instantly to the provided account information listed by the Participants. All payments are 100% between member to members.</p>
+                </div>
+                <div class="col-md-4">
+                   <h6 class="text-white heading-advantage">Instant Payout</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 border-right-advantage pb-4">
+                   <p class="text-white text-advantage">LevelUp is a crowd funding platform that facilitates peer to peer payment(s) within participants. All creators of this platform are equal participants of this project</p>
+                </div>
+                <div class="col-md-4">
+                   <h6 class="text-white heading-advantage">Decentralized platform</h6>
+                </div>
+            </div>
+          </div>
+        </div>
     </section>
+  </div>
+  <div class="container">
+    @include('layouts.footer')
   </div>
 @endsection

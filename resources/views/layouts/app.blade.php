@@ -41,23 +41,23 @@
                         <!-- Authentication Links -->
                         @guest
 
-                                <li class="nav-item mr-3">
+                                <li class="nav-item py-2 px-1">
                                     <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
                                 </li>
-                                <li class="nav-item mr-3">
-                                    <a class="nav-link" href="{{ url('/') }}">{{ __('How it works') }}</a>
+                                <li class="nav-item  py-2 px-1">
+                                    <a class="nav-link" href="{{ url('howitworks') }}">{{ __('How it works') }}</a>
                                 </li>
-                                <li class="nav-item mr-3">
-                                    <a class="nav-link" href="{{ url('/') }}">{{ __('FAQ') }}</a>
+                                <li class="nav-item  py-2 px-1">
+                                    <a class="nav-link" href="{{ url('faq') }}">{{ __('FAQ') }}</a>
                                 </li>
-                                <li class="nav-item mr-3">
-                                    <a class="nav-link" href="{{ url('/') }}">{{ __('contact Us') }}</a>
+                                <li class="nav-item  py-2 px-1">
+                                    <a class="nav-link" href="{{ url('user/contact') }}">{{ __('contact Us') }}</a>
                                 </li>
-                                 <li class="nav-item mr-3">
+                                 <li class=" py-2 px-1">
                                     <a class="btn btn-danger" href="{{ route('register') }}">{{ __('Sign Up') }}</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="btn btn-danger" href="{{ route('login') }}">{{ __('Sign In') }}</a>
+                                <li class="py-2 px-1">
+                                    <a class="btn btn-danger ml-2" href="{{ route('login') }}">{{ __('Sign In') }}</a>
                                 </li>
                             @endguest
                             @auth

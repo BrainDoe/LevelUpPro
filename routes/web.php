@@ -19,6 +19,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/howitworks', function () {
+    return view('pages.howitworks');
+});
+
+Route::get('/faq', function () {
+    return view('pages.faq');
+});
+Route::get('/user/contact', function () {
+    return view('pages.contact');
+});
+
 Route::get('/test', [TestController::class, 'index'])->name('test');
 Route::get('/show/{ref_id}', [TestController::class, 'show'])->name('show');
 

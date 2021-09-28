@@ -27,25 +27,9 @@ class HomeController extends Controller
     public function index()
     {
         $users = User::getUsers('referrals');
-
-
         return view('home', [
             'users' => $users
         ]);
     }
-
-
-
-    // public function getcountry(){
-    //    $countries = new Countries();
-
-    //    $allCountry =  $countries->all()->pluck('name.common')->toArray();
-
-    //     return view('auth.register', [
-    //         'allCountry' => $allCountry,
-    //     ]);
-    // }
-
-
 
 }
