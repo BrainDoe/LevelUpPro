@@ -7,7 +7,7 @@
 
       <!-- Dashboards -->
       <li class="side-nav-menu-item active">
-        <a class="side-nav-menu-link media align-items-center" href="index.html">
+        <a class="side-nav-menu-link media align-items-center" href="{{ url('/home') }}">
           <span class="side-nav-menu-icon d-flex mr-3">
             <i class="nova-dashboard"></i>
           </span>

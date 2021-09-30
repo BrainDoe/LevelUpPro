@@ -17,6 +17,8 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
   <link href="{{ asset('backend/assets/vendor/nova-icons/nova-icons.css') }}" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- CSS Implementing Libraries -->
   <link rel="stylesheet" href="{{ asset('backend/assets/vendor/animate.css/animate.min.css') }}">
   <link rel="stylesheet" href="{{ asset('backend/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css') }}">
@@ -27,9 +29,12 @@
 
   <!-- CSS Nova Template -->
   <link rel="stylesheet" href="{{ asset('backend/assets/css/theme.css') }}">
+   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
-<body class="has-sidebar has-fixed-sidebar-and-header">
+<body class="has-sidebar has-fixed-sidebar-and-header bg-primary">
         <!-- Header -->
         @include('layouts.dashboard.header')
         {{-- Main Section --}}
@@ -37,11 +42,13 @@
         <!-- Sidebar Nav -->
         @include('layouts.dashboard.sidebar')
         <div class="content">
-            @yield('content')
+            <div class="container">
+                @yield('content')
+            </div>
         </div>
         <!-- Footer -->
-        @include('layouts.footer')
     </main>
+        @include('layouts.footer')
 @include('layouts.dashboard.script')
 </body>
 </html>

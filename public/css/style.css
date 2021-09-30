@@ -279,6 +279,37 @@ h6.heading-advantage {
     text-align: justify;
 }
 
+/* Dashboard */
+.indicator-top-right {
+    top: 0px !important;
+    right: 0px !important;
+}
+
+.breadcrumb {
+    background-color: transparent !important;
+}
+
+.callout-info {
+    border-radius: 0.25rem;
+    background-color: #07097f;
+    color: #fff;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    border-left: 5px solid #0a753b;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+}
+
+.countdown-display {
+    border: 2px solid #dc3545;
+    color: #fff;
+}
+
+.btn-app {
+    background-color: #07097f;
+    color: #fff !important;
+    padding: 15px 5px;
+    margin: 0px 10px;
+}
+
 /* Media Query on 790px*/
 @media (max-width: 790px) {
     .wrapper .center-line {

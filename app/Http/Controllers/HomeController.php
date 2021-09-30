@@ -27,9 +27,9 @@ class HomeController extends Controller
     public function index()
     {
         $users = User::getUsers('referrals');
-        return view('home', [
-            'users' => $users
-        ]);
+        return view('customer.users.dashboard',  [
+            'users' => $users]
+            );
     }
 
 }
