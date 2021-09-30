@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-3 mb-3">
+        <div class="col-md-4 col-lg-3 mb-3">
             <div class="card card card-outline" style="background-color: #07097f;">
                <div class="card-body">
                    <div class="text-center">
@@ -51,7 +51,7 @@
                </div>
             </div>
         </div>
-        <div class="col-md-9 mx-auto">
+        <div class="col-md-8 col-lg-9  mx-auto">
            <div class="box">
                 <div class="box-body">
                     <a class="btn btn-app mb-3">
@@ -97,6 +97,45 @@
                     </a>
                 </div>
            </div>
+           <div class="row">
+
+       <div class="col-12 col-sm-6 col-md-4">
+            <div class="info-box mb-3">
+              <span class="info-box-icon elevation-1">
+              <i class="fa fa-users"></i>
+              </span>
+              <div class="info-box-content">
+                <span class="info-box-text">Total Referrals</span>
+                <h5 class="info-box-number">0</h5>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="info-box mb-3 bg-primary">
+              <span class="info-box-icon   elevation-1"><i class="fa fa-tree"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">My Payment</span>
+                <h5 class="info-box-number">0</h5>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+           <div class="col-12 col-sm-6 col-md-4">
+            <div class="info-box mb-3">
+              <span class="info-box-icon  elevation-1"><i class="fa fa-users"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Total Members</span>
+                <h5 class="info-box-number">0</h5>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+      </div>
         </div>
       </div>
   </div>
