@@ -279,6 +279,67 @@ h6.heading-advantage {
     text-align: justify;
 }
 
+/* Dashboard */
+.indicator-top-right {
+    top: 0px !important;
+    right: 0px !important;
+}
+
+.breadcrumb {
+    background-color: transparent !important;
+}
+
+.callout-info {
+    border-radius: 0.25rem;
+    background-color: #07097f;
+    color: #fff;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    border-left: 5px solid #0a753b;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+}
+
+.countdown-display {
+    border: 2px solid #dc3545;
+    color: #fff;
+}
+
+.box-body {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.btn-app {
+    background-color: #07097f;
+    color: #fff !important;
+    padding: 15px 5px;
+    margin: 0px 10px;
+}
+
+.info-box {
+    box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    min-height: 80px;
+    display: flex;
+    color: #fff;
+}
+
+.info-box-icon {
+    border-radius: 0.25rem;
+    display: block;
+    width: 70px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+    background-color: #07097f;
+    color: #fff;
+    align-items: center;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* Media Query on 790px*/
 @media (max-width: 790px) {
     .wrapper .center-line {
@@ -300,6 +361,11 @@ h6.heading-advantage {
     .grid-item {
         display: grid;
         grid-template-columns: 1fr;
+    }
+
+    .box-body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -334,5 +400,10 @@ h6.heading-advantage {
     .heading-text {
         font-size: 0.8rem;
         text-align: "justify";
+    }
+
+    .box-body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
