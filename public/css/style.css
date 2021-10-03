@@ -340,6 +340,40 @@ h6.heading-advantage {
     justify-content: center;
 }
 
+.small-box {
+    border-radius: 0.25rem;
+    box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #07097f;
+    color: #fff;
+}
+
+.small-box .icon {
+    transition: all 0.3s linear;
+    position: absolute;
+    top: -2px;
+    right: 50px;
+    z-index: 0;
+    font-size: 90px;
+    color: rgba(0, 0, 0, 0.15);
+}
+
+.small-box > .small-box-footer {
+    position: relative;
+    text-align: center;
+    padding: 3px 0;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    background-color: #dc3545;
+}
+
 /* Media Query on 790px*/
 @media (max-width: 790px) {
     .wrapper .center-line {

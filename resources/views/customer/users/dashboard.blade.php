@@ -9,7 +9,7 @@
             <nav aria-label="breadcrumb" style="background-color:transparent">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="/customer/users/dashboard">Home</a></li>
-                    <li class="breadcrumb-item active text-white" aria-current="page">Library</li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Dashboard</li>
                 </ol>
             </nav>
         </div>
@@ -97,8 +97,9 @@
                     </a>
                 </div>
            </div>
-           <div class="row">
 
+
+    <div class="row py-3">
        <div class="col-12 col-sm-6 col-md-4">
             <div class="info-box mb-3">
               <span class="info-box-icon elevation-1">
@@ -138,5 +139,63 @@
       </div>
         </div>
       </div>
+    <div class="row py-3">
+      <div class="col-md-6 col-lg-3">
+            <!-- small box -->
+            <div class="small-box">
+              <div class="inner">
+                <h3>₦ 0</h3>
+                <p>Provided Payment</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-gift"></i>
+              </div>
+                <a href="/customer/users/provided" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+          <!-- ./col -->
+      <div class="col-lg-3 col-md-6">
+            <!-- small box -->
+            <div class="small-box ">
+              <div class="inner">
+                <h3>₦ 0</h3>
+                <p>Received Payment</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-gift"></i>
+              </div>
+                <a href="/customer/users/provided" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+          <!-- ./col -->
+      <div class="col-lg-3 col-md-6">
+            <!-- small box -->
+            <div class="small-box ">
+              <div class="inner">
+                <h3>₦ 0</h3>
+                <p>Pending Payment Request</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-gift"></i>
+              </div>
+                <a href="/customer/users/provided" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+          <!-- ./col -->
+      <div class="col-lg-3 col-md-6">
+            <!-- small box -->
+            <div class="small-box ">
+              <div class="inner">
+                <h3>₦ 0</h3>
+                <p>Completed Payment Request</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-gift"></i>
+              </div>
+                <a href="/customer/users/provided" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+          <!-- ./col -->
+  </div>
   </div>
 @endsection
