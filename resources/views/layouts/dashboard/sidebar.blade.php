@@ -1,92 +1,51 @@
   <!-- Sidebar Nav -->
-  <aside id="sidebar" class="js-custom-scroll side-nav">
+  <aside id="sidebar" class="js-custom-scroll side-nav border-sidebar" style="background-color: #05064c">
     <ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
       <!-- Sidebar Sub Title -->
-      <li class="sidebar-heading h6">Dashboards</li>
+      <li class="sidebar-heading h6">Welcome {{ Auth::user()->name }}</li>
       <!-- End Sidebar Sub Title -->
 
       <!-- Dashboards -->
       <li class="side-nav-menu-item active">
-        <a class="side-nav-menu-link media align-items-center" href="{{ url('/home') }}">
+        <a class="side-nav-menu-link media align-items-center" href="{{ route('dashboard') }}">
           <span class="side-nav-menu-icon d-flex mr-3">
-            <i class="nova-dashboard"></i>
+            <i class="bi bi-speedometer2"></i>
           </span>
           <span class="side-nav-fadeout-on-closed media-body">Dashboards</span>
         </a>
       </li>
       <!-- End Dashboards -->
 
-      <!-- ICO Distribution Admin -->
+      <!-- Support Ticket -->
       <li class="side-nav-menu-item">
-        <a class="side-nav-menu-link media align-items-center" href="ico-distribution-admin.html">
+        <a class="side-nav-menu-link media align-items-center" href="{{ route('support_ticket') }}">
           <span class="side-nav-menu-icon d-flex mr-3">
-            <i class="nova-light-bulb"></i>
+            <i class="bi bi-chat-text"></i>
           </span>
-          <span class="side-nav-fadeout-on-closed media-body">ICO Distribution Admin</span>
+          <span class="side-nav-fadeout-on-closed media-body">Support Ticket</span>
         </a>
       </li>
-      <!-- End ICO Distribution Admin -->
+      <!-- End Support Ticket -->
 
-      <!-- ICO Distribution User -->
+      <!-- Profile -->
       <li class="side-nav-menu-item">
-        <a class="side-nav-menu-link media align-items-center" href="ico-distribution-user.html">
+        <a class="side-nav-menu-link media align-items-center" href="{{ route('user_profile') }}">
           <span class="side-nav-menu-icon d-flex mr-3">
-            <i class="nova-user"></i>
+            <i class="bi bi-pencil"></i>
           </span>
-          <span class="side-nav-fadeout-on-closed media-body">ICO Distribution User</span>
+          <span class="side-nav-fadeout-on-closed media-body">My Profile</span>
         </a>
       </li>
-      <!-- End ICO Distribution User -->
+      <!-- End Profile-->
 
-      <!-- Sidebar Sub Title -->
-      <li class="sidebar-heading h6">Actions</li>
-      <!-- End Sidebar Sub Title -->
-
-      <!-- Buy and Sell -->
-      <li class="side-nav-menu-item">
-        <a class="side-nav-menu-link media align-items-center" href="https://htmlstream.com/preview/nova-v1.2.2/demo-crypto/actions/buy-and-sell.html">
-          <span class="side-nav-menu-icon d-flex mr-3">
-            <i class="nova-stats-up"></i>
-          </span>
-          <span class="side-nav-fadeout-on-closed media-body">Buy and Sell</span>
-        </a>
-      </li>
-      <!-- End Buy and Sell -->
-
-      <!-- My Wallet -->
-      <li class="side-nav-menu-item">
-        <a class="side-nav-menu-link media align-items-center" href="https://htmlstream.com/preview/nova-v1.2.2/demo-crypto/actions/my-wallet.html">
-          <span class="side-nav-menu-icon d-flex mr-3">
-            <i class="nova-wallet"></i>
-          </span>
-          <span class="side-nav-fadeout-on-closed media-body">My Wallet</span>
-        </a>
-      </li>
-      <!-- End My Wallet -->
-
-      <!-- Affiliate Program -->
-      <li class="side-nav-menu-item">
-        <a class="side-nav-menu-link media align-items-center" href="https://htmlstream.com/preview/nova-v1.2.2/demo-crypto/actions/affiliate-program.html">
-          <span class="side-nav-menu-icon d-flex mr-3">
-            <i class="nova-announcement"></i>
-          </span>
-          <span class="side-nav-fadeout-on-closed media-body">Affiliate Program</span>
-        </a>
-      </li>
-      <!-- End Affiliate Program -->
-
-      <!-- Sidebar Sub Title -->
-      <li class="sidebar-heading h6">Settings</li>
-      <!-- End Sidebar Sub Title -->
-
-      <!-- Settings -->
+      <!-- My Referrals -->
       <li class="side-nav-menu-item side-nav-has-menu">
         <a class="side-nav-menu-link media align-items-center" href="#"
            data-target="#subMenuSettings">
           <span class="side-nav-menu-icon d-flex mr-3">
-            <i class="nova-settings"></i>
+            <i class="bi bi-tree"></i>
           </span>
-          <span class="side-nav-fadeout-on-closed media-body">Account Settings</span>
+          <span class="side-nav-fadeout-on-closed media-body">My Referrals</span>
           <span class="side-nav-control-icon d-flex">
             <i class="nova-angle-right side-nav-fadeout-on-closed"></i>
           </span>
@@ -95,52 +54,119 @@
 
         <ul id="subMenuSettings" class="side-nav-menu side-nav-menu-second-level mb-0">
           <li class="side-nav-menu-item">
-            <a class="side-nav-menu-link" href="https://htmlstream.com/preview/nova-v1.2.2/demo-crypto/settings/my-profile.html">My Profile</a>
+            <a class="text-gray-light link-sidebar" href="#">
+              <i class="bi bi-circle"></i>
+              Genealogy
+            </a>
           </li>
           <li class="side-nav-menu-item">
-            <a class="side-nav-menu-link" href="https://htmlstream.com/preview/nova-v1.2.2/demo-crypto/settings/preferences.html">Preferences</a>
-          </li>
-          <li class="side-nav-menu-item">
-            <a class="side-nav-menu-link" href="https://htmlstream.com/preview/nova-v1.2.2/demo-crypto/settings/security.html">Security</a>
-          </li>
-          <li class="side-nav-menu-item">
-            <a class="side-nav-menu-link" href="https://htmlstream.com/preview/nova-v1.2.2/demo-crypto/settings/linked-accounts.html">Linked Accounts</a>
-          </li>
-          <li class="side-nav-menu-item">
-            <a class="side-nav-menu-link" href="https://htmlstream.com/preview/nova-v1.2.2/demo-crypto/settings/api-access.html">API Access</a>
-          </li>
-          <li class="side-nav-menu-item">
-            <a class="side-nav-menu-link" href="https://htmlstream.com/preview/nova-v1.2.2/demo-crypto/settings/limits.html">Limits</a>
+            <a class="text-gray-light link-sidebar" href="#">
+              <i class="bi bi-circle"></i>
+              My Referrals
+            </a>
           </li>
         </ul>
       </li>
-      <!-- End Settings -->
-
-      <!-- Sidebar Sub Title -->
-      <li class="sidebar-heading h6">Others</li>
-      <!-- End Sidebar Sub Title -->
-
-      <!-- UI Kit Components -->
-      <li class="side-nav-menu-item">
-        <a class="side-nav-menu-link media align-items-center" href="https://htmlstream.com/preview/nova-v1.2.2/ui-components/widgets.html">
+      <li class="side-nav-menu-item side-nav-has-menu">
+        <a class="side-nav-menu-link media align-items-center" href="#"
+           data-target="#payments">
           <span class="side-nav-menu-icon d-flex mr-3">
-            <i class="nova-palette"></i>
+            &#8358;
           </span>
-          <span class="side-nav-fadeout-on-closed media-body">UI Kit Components</span>
+          <span class="side-nav-fadeout-on-closed media-body">My Payments</span>
+          <span class="side-nav-control-icon d-flex">
+            <i class="nova-angle-right side-nav-fadeout-on-closed"></i>
+          </span>
+          <span class="side-nav__indicator side-nav-fadeout-on-closed"></span>
+        </a>
+
+        <ul id="payments" class="side-nav-menu side-nav-menu-second-level mb-0">
+          <li class="side-nav-menu-item">
+
+            <a class="text-gray-light link-sidebar" href="#">
+              <i class="bi bi-circle"></i>
+              <span> Upgrade</span>
+            </a>
+          </li>
+          <li class="side-nav-menu-item">
+            <a class="text-gray-light link-sidebar" href="#">
+              <i class="bi bi-circle"></i>
+              <span>My Referrals</span>
+            </a>
+          </li>
+          <li class="side-nav-menu-item">
+            <a class="text-gray-light link-sidebar" href="#">
+              <i class="bi bi-circle"></i>
+              <span>Payment Processors</span>
+            </a>
+          </li>
+          <li class="side-nav-menu-item">
+            <a class="text-gray-light link-sidebar" href="#">
+              <i class="bi bi-circle"></i>
+              <span>Provided Payments</span>
+            </a>
+          </li>
+          <li class="side-nav-menu-item">
+            <a class="text-gray-light link-sidebar" href="#">
+              <i class="bi bi-circle"></i>
+              <span>Pending Payments</span>
+            </a>
+          </li>
+          <li class="side-nav-menu-item">
+            <a class="text-gray-light link-sidebar" href="#">
+              <i class="bi bi-circle"></i>
+              <span>Completed Payments</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- End My Payments -->
+
+      {{-- Setting --}}
+      <li class="side-nav-menu-item">
+        <a class="side-nav-menu-link media align-items-center" href="#">
+          <span class="side-nav-menu-icon d-flex mr-3">
+            <i class="bi bi-gear"></i>
+          </span>
+          <span class="side-nav-fadeout-on-closed media-body">Setting</span>
         </a>
       </li>
-      <!-- End UI Kit Components -->
+      {{-- End Setting --}}
 
-      <!-- Documentation -->
+      {{-- Updates --}}
       <li class="side-nav-menu-item">
-        <a class="side-nav-menu-link media align-items-center" href="https://htmlstream.com/preview/nova-v1.2.2/documentation/index.html">
+        <a class="side-nav-menu-link media align-items-center" href="#">
           <span class="side-nav-menu-icon d-flex mr-3">
-            <i class="nova-file"></i>
+            <i class="bi bi-bell"></i>
           </span>
-          <span class="side-nav-fadeout-on-closed media-body">Documentation</span>
+          <span class="side-nav-fadeout-on-closed media-body">Upates</span>
+        </a>
+      </li> 
+      {{-- End Updates --}}
+      <li class="side-nav-menu-item">
+        <a class="side-nav-menu-link media align-items-center" href="#">
+          <span class="side-nav-menu-icon d-flex mr-3">
+            <i class="bi bi-circle"></i>
+          </span>
+          <span class="side-nav-fadeout-on-closed media-body">Referral Link</span>
         </a>
       </li>
-      <!-- End Documentation -->
+      <li class="side-nav-menu-item">
+        <a class="side-nav-menu-link media align-items-center" href="#">
+          <span class="side-nav-menu-icon d-flex mr-3">
+            <i class="bi bi-pencil"></i>
+          </span>
+          <span class="side-nav-fadeout-on-closed media-body">Change Password</span>
+        </a>
+      </li>
+      <li class="side-nav-menu-item">
+        <a class="side-nav-menu-link media align-items-center" href="#">
+          <span class="side-nav-menu-icon d-flex mr-3">
+            <i class="bi bi-power"></i>
+          </span>
+          <span class="side-nav-fadeout-on-closed media-body">Logout</span>
+        </a>
+      </li>
     </ul>
   </aside>
   <!-- End Sidebar Nav -->

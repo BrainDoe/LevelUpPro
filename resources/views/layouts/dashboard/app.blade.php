@@ -14,10 +14,10 @@
   <link rel="shortcut icon" href="https://htmlstream.com/preview/nova-v1.2.2/favicon.ico">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
   <link href="{{ asset('backend/assets/vendor/nova-icons/nova-icons.css') }}" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
   <!-- CSS Implementing Libraries -->
   <link rel="stylesheet" href="{{ asset('backend/assets/vendor/animate.css/animate.min.css') }}">

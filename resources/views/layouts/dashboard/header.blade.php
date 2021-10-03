@@ -30,8 +30,8 @@
         <!-- Header Dropdown -->
         <div class="d-flex ml-auto">
           <a  class="header-invoker" href="#">
-            <i class="fa fa-modx" aria-hidden="true"></i>
-            How it works
+            <i class="bi bi-stack mr-1"></i>  
+             <span> How it works</span>
           </a>
           <a id="notificationsInvoker" class="header-invoker" href="#" aria-controls="notifications" aria-haspopup="true" aria-expanded="false"
              data-unfold-event="click"
@@ -41,7 +41,7 @@
              data-unfold-animation-in="fadeIn"
              data-unfold-animation-out="fadeOut">
             <span class="indicator  indicator-primary rounded-circle"></span>
-            <i class="nova-bell"></i>
+            <i class="bi bi-bell"></i>
           </a>
           <a class="header-invoker" href="{{ route('logout') }}" aria-controls="notifications"
              onclick="event.preventDefault();
@@ -50,7 +50,7 @@
              data-unfold-duration="300"
              data-unfold-animation-in="fadeIn"
              data-unfold-animation-out="fadeOut">
-            <i class="fa fa-power-off"></i>
+             <i class="bi bi-power"></i>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
                 </form>

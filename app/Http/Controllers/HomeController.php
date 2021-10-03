@@ -27,9 +27,27 @@ class HomeController extends Controller
     public function index()
     {
         $users = User::getUsers('referrals');
-        return view('customer.users.dashboard',  [
-            'users' => $users]
-            );
+        return view(
+            'customer.users.dashboard',
+            [
+                'users' => $users
+            ]
+        );
     }
 
+    public function support_ticket()
+    {
+        return view('customer.users.support_ticket');
+    }
+
+    public function user_profile(Request $request)
+    {
+        $ipAddress = $request->ip();
+        return view('customer.users.user_profile', compact('ipAddress'));
+    }
+
+    public function update_profile(Request $request)
+    {
+        return view('customer.users.update_profile');
+    }
 }
