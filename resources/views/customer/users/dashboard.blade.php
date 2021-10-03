@@ -9,7 +9,7 @@
             <nav aria-label="breadcrumb" style="background-color:transparent">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="/customer/users/dashboard">Home</a></li>
-                    <li class="breadcrumb-item active text-white" aria-current="page">Library</li>
+                    <li class="breadcrumb-item active text-white" aria-current="page">Dashboard</li>
                 </ol>
             </nav>
         </div>
@@ -137,6 +137,204 @@
           </div>
       </div>
         </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-3 mb-3">
+          <div class="card card-outline" style="background-color: #07097f;color:#fff;">
+            <div class="card-body card-profile">
+             <div class="text-center"> 
+             <h3 class="profile-username text-center"> Level 1</h3>
+               <p class="text-muted text-center"> Price : &#8358; 10K  </p>
+             
+                <a href="/customer/users/upgrade"  class="btn btn-success btn-sm text-center"><b>EXTEND</b></a>
+                </div>
+                 <br>
+            <ul class="list-group list-group-unbordered">
+                <li class="list-group-item">
+                  <strong class="text-primary">Referrals</strong class="text-primary"> <a class="float-right text-primary">2</a>
+                </li>
+                <li class="list-group-item">
+                  <strong class="text-primary">Income</strong class="text-primary"> <a class="float-right text-primary">&#8358;20K </a>
+                </li>
+                
+              </ul>
+
+              
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+        <div class="col-12 col-sm-6 col-md-3 mb-3">
+          <div class="card card-outline" style="background-color: #07097f;color:#fff;">
+            <div class="card-body card-profile">
+             <div class="text-center"> 
+             <h3 class="profile-username text-center"> Level 2</h3>
+               <p class="text-muted text-center"> Price : &#8358; 20K  </p>
+             
+                <a href="/customer/users/upgrade"  class="btn btn-success btn-sm text-center disabled"><b>EXTEND</b></a>
+                </div>
+                 <br>
+            <ul class="list-group list-group-unbordered">
+                <li class="list-group-item">
+                  <strong class="text-primary">Referrals</strong class="text-primary"> <a class="float-right text-primary">4</a>
+                </li>
+                <li class="list-group-item">
+                  <strong class="text-primary">Income</strong class="text-primary"> <a class="float-right text-primary">&#8358;80K</a>
+                </li>
+                
+              </ul>
+
+              
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+        <div class="col-12 col-sm-6 col-md-3 mb-3">
+          <div class="card card-outline" style="background-color: #07097f;color:#fff;">
+            <div class="card-body card-profile">
+             <div class="text-center"> 
+             <h3 class="profile-username text-center"> Level 3</h3>
+               <p class="text-muted text-center"> Price : &#8358;40 </p>
+             
+                <a href="/customer/users/upgrade"  class="btn btn-success btn-sm text-center disabled"><b>EXTEND</b></a>
+                </div>
+                 <br>
+            <ul class="list-group list-group-unbordered">
+                <li class="list-group-item">
+                  <strong class="text-primary">Referrals</strong class="text-primary"> <a class="float-right text-primary">8</a>
+                </li>
+                <li class="list-group-item">
+                  <strong class="text-primary">Income</strong class="text-primary"> <a class="float-right text-primary">&#8358;240K</a>
+                </li>
+              </ul>
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+        <div class="col-12 col-sm-6 col-md-3 mb-3">
+          <div class="card card-outline" style="background-color: #07097f;color:#fff;">
+            <div class="card-body card-profile">
+             <div class="text-center"> 
+             <h3 class="profile-username text-center"> Level 4</h3>
+               <p class="text-muted text-center"> Price : &#8358; 80K  </p>
+             
+                <a href="/customer/users/upgrade"  class="btn btn-success btn-sm text-center disabled"><b>EXTEND</b></a>
+                </div>
+                 <br>
+            <ul class="list-group list-group-unbordered">
+                <li class="list-group-item">
+                  <strong class="text-primary">Referrals</strong class="text-primary"> <a class="float-right text-primary">16</a>
+                </li>
+                <li class="list-group-item">
+                  <strong class="text-primary">Income</strong class="text-primary"> <a class="float-right text-primary">&#8358;960K</a>
+                </li>    
+              </ul>
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card card-outline" style="background-color: #07097f;color:#fff;">
+            <div class="card-body card-profile">
+             <div class="text-center"> 
+             <h3 class="profile-username text-center"> Level 5</h3>
+               <p class="text-muted text-center"> Price : &#8358;160K  </p>
+             
+                <a href="/customer/users/upgrade"  class="btn btn-success btn-sm text-center disabled"><b>EXTEND</b></a>
+                </div>
+                 <br>
+            <ul class="list-group list-group-unbordered">
+                <li class="list-group-item">
+                  <strong class="text-primary">Referrals</strong class="text-primary"> <a class="float-right text-primary">32</a>
+                </li>
+                <li class="list-group-item">
+                  <strong class="text-primary">Income</strong class="text-primary"> <a class="float-right text-primary">&#8358;3,840,000</a>
+                </li>
+                
+              </ul>
+
+              
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card card-outline" style="background-color: #07097f;color:#fff;">
+            <div class="card-body card-profile">
+             <div class="text-center"> 
+             <h3 class="profile-username text-center"> Level 6</h3>
+               <p class="text-muted text-center"> Price : &#8358; 640K  </p>
+             
+                <a href="/customer/users/upgrade"  class="btn btn-success btn-sm text-center disabled"><b>EXTEND</b></a>
+                </div>
+                 <br>
+            <ul class="list-group list-group-unbordered">
+                <li class="list-group-item">
+                  <strong class="text-primary">Referrals</strong class="text-primary"> <a class="float-right text-primary">128</a>
+                </li>
+                <li class="list-group-item">
+                  <strong class="text-primary">Income</strong class="text-primary"> <a class="float-right text-primary">&#8358;61,440,000</a>
+                </li>
+                
+              </ul>
+
+              
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card card-outline" style="background-color: #07097f;color:#fff;">
+            <div class="card-body card-profile">
+             <div class="text-center"> 
+             <h3 class="profile-username text-center"> Level 7</h3>
+               <p class="text-muted text-center"> Price : &#8358;640K</p>
+             
+                <a href="/customer/users/upgrade"  class="btn btn-success btn-sm text-center disabled"><b>EXTEND</b></a>
+                </div>
+                 <br>
+            <ul class="list-group list-group-unbordered">
+                <li class="list-group-item">
+                  <strong class="text-primary">Referrals</strong class="text-primary"> <a class="float-right text-primary">32</a>
+                </li>
+                <li class="list-group-item">
+                  <strong class="text-primary">Income</strong class="text-primary"> <a class="float-right text-primary">&#8358;3,840,000 </a>
+                </li>
+                
+              </ul>
+
+              
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card card-outline" style="background-color: #07097f;color:#fff;">
+            <div class="card-body card-profile">
+             <div class="text-center"> 
+             <h3 class="profile-username text-center"> Level 8</h3>
+               <p class="text-muted text-center"> Price : &#8358; 1.28M  </p>
+             
+                <a href="/customer/users/upgrade"  class="btn btn-success btn-sm text-center disabled"><b>EXTEND</b></a>
+                </div>
+                 <br>
+            <ul class="list-group list-group-unbordered">
+                <li class="list-group-item">
+                  <strong class="text-primary">Referrals</strong class="text-primary"> <a class="float-right text-primary">256</a>
+                </li>
+                <li class="list-group-item">
+                  <strong class="text-primary">Income</strong class="text-primary"> <a class="float-right text-primary">&#8358;245,760,000</a>
+                </li>
+                
+              </ul>
+
+              
+            </div>
+            <!-- /.box-body -->
+          </div>
+      </div>
       </div>
   </div>
 @endsection

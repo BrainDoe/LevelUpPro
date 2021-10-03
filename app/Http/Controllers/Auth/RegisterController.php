@@ -8,8 +8,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Validator;
+use PragmaRX\Countries\Package\Countries;
 use Illuminate\Foundation\Auth\RegistersUsers;
- use PragmaRX\Countries\Package\Countries;
 
 class RegisterController extends Controller
 {
@@ -52,7 +52,8 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'firstname' => ['required', 'string', 'max:255'],
+            'lastlast' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'country' => ['required'],
@@ -67,17 +68,19 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    protected function create(array $data) {
+    protected function create(array $data)
+    {
         // $check_reg_num = User::find($reg_number);
 
         // $url = $request->url();
         // dd($url);
-        
+
         $referrer = User::where('reg_number', (session()->pull('referrer')))->first();
 
-        
+
         return User::create([
-            'name' => $data['name'],
+            'first' => $data['first'],
+            'last' => $data['last'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'country' => $data['country'],
@@ -85,17 +88,17 @@ class RegisterController extends Controller
             'ref_id' => $referrer ? $referrer->id : null,
             'reg_number' => $data['reg_number']
         ]);
-       
     }
 
-    public function showRegistrationForm(Request $request) {
+    public function showRegistrationForm(Request $request)
+    {
         if ($request->has('ref')) {
-         session(['referrer' => $request->query('ref')]);
+            session(['referrer' => $request->query('ref')]);
         }
 
-         $countries = new Countries();
+        $countries = new Countries();
 
-       $allCountry =  $countries->all()->pluck('name.common')->toArray();
+        $allCountry =  $countries->all()->pluck('name.common')->toArray();
 
         return view('auth.register', [
             'allCountry' => $allCountry,

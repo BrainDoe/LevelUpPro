@@ -30,6 +30,7 @@ Route::get('/user/contact', function () {
     return view('pages.contact');
 });
 
+
 Route::get('/test', [TestController::class, 'index'])->name('test');
 Route::get('/show/{ref_id}', [TestController::class, 'show'])->name('show');
 
@@ -37,7 +38,8 @@ Route::get('/register/{reg_number}', [App\Http\Controllers\HomeController::class
 
 Auth::routes();
 
-Route::get('/customer/users/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('customer/users/dashboard');
-// Route::get('/register', [App\Http\Controllers\HomeController::class, 'getcountry']);
+Route::get('/customer/users/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+Route::get('/customer/users/support_ticket', [App\Http\Controllers\HomeController::class, 'support_ticket'])->name('support_ticket');
 
-
+Route::get('/customer/users/user_profile', [App\Http\Controllers\HomeController::class, 'user_profile'])->name('user_profile');
+Route::get('/customer/users/update_profile', [App\Http\Controllers\HomeController::class, 'update_profile'])->name('update_profile');

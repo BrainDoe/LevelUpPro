@@ -5,6 +5,21 @@
     --white-color: #fff;
 }
 
+.text-gray-light {
+    color: #f2f2f2;
+}
+
+.link-sidebar {
+    text-decoration: none !important;
+    font-family:'Montserrat', 'sans-serif';
+    font-weight: 400;
+    font-size: .8rem !important;
+}
+
+.link-sidebar:hover {
+    color: #c1c1c1;
+}
+
 /* Navar Section */
 
 .navbar .border-bottom {
@@ -250,6 +265,10 @@ h6.heading-advantage {
     border-bottom: 5px solid #0a753b !important;
     text-align: center !important;
 }
+.borderTop {
+    border-top: 5px solid #0a753b !important;
+    text-align: center !important;
+}
 
 /* ////// */
 /* How it works */
@@ -338,6 +357,39 @@ h6.heading-advantage {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+/* Profile */
+.list-group-item {
+    background-color: #07097f !important;
+    color: #f1f1f1 !important;
+}
+
+/* Register */
+.btn-submit {
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    width: 100%;
+    background-color: #07097f;
+    color: #fff;
+}
+
+input[type=text]:not(.browser-default).validate+label,
+input[type=email]:not(.browser-default).validate+label,
+input[type=number]:not(.browser-default).validate+label,
+input[type=password]:not(.browser-default).validate+label {
+    color: #07097f !important;
+}
+.btn-submit:hover{
+    background-color: #dc3546d0;
+    transition: all .2sm ease-in-out;
 }
 
 /* Media Query on 790px*/
