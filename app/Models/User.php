@@ -11,10 +11,12 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    
+
 
     protected $fillable = [
-        'name',
+        'firstname',
+        'lastname',
+        'username',
         'email',
         'password',
         'phone',
@@ -47,7 +49,7 @@ class User extends Authenticatable
             $rootuser->children = $allUsers->where('ref_id', $rootuser->id);
             // $userCount = $rootuser->children->count();
             // dd($userCount);
-            
+
             if($rootuser->children->isNotEmpty()){
                 self::formatUsers($rootuser->children, $allUsers);
             }

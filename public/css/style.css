@@ -269,6 +269,9 @@ h6.heading-advantage {
     border-top: 5px solid #0a753b !important;
     text-align: center !important;
 }
+.border_outline {
+    border-top: 5px solid #0a753b !important;
+}
 
 /* ////// */
 /* How it works */
@@ -308,6 +311,14 @@ h6.heading-advantage {
     background-color: transparent !important;
 }
 
+.callout-info {
+    border-radius: 0.25rem;
+    background-color: #07097f;
+    color: #fff;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    border-left: 5px solid #0a753b;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+}
 .callout-info {
     border-radius: 0.25rem;
     background-color: #07097f;
@@ -389,6 +400,10 @@ h6.heading-advantage {
     color: #fff;
 }
 
+.btn-submit:focus {
+    background-color: #07097fa1 !important;
+}
+
 .small-box .icon {
     transition: all 0.3s linear;
     position: absolute;
@@ -410,6 +425,12 @@ h6.heading-advantage {
     background: rgba(0, 0, 0, 0.1);
     text-decoration: none;
     background-color: #dc3545;
+}
+
+.alert-danger {
+    /* color: #842029; */
+    background-color: #fd452c !important;
+    border-color: #fd452c !important;
 }
 
 /* Media Query on 790px*/

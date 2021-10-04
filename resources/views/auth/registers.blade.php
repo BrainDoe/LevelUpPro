@@ -11,7 +11,10 @@
                             </a>
                         </div>
                         <h3 class="center-align" style="color: #07097f">Sign In</h3>
-                       <form method="POST" action="{{ route('login') }}">
+                        <div class="alert alert-danger">
+                            <span class="text-white">You Can not Sign Up without Referral Link</span>
+                        </div>
+                       <form action="{{ route('register') }}">
                            @csrf
                             <div class="row">
                                 <div class="input-field col s12">
@@ -64,7 +67,7 @@
                        </form>
                         <div class="row">
                             <div class="input-field col s12">
-                            <a href="{{ route('registers') }}" style="color: #07097f">
+                            <a href="{{ route('register') }}" style="color: #07097f">
                                 <strong>{{ __("Don't have an account?") }}</strong>
                                 <span class="text-danger">{{ __("Sign Up") }}</span>
                             </a>

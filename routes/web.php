@@ -42,4 +42,11 @@ Route::get('/customer/users/dashboard', [App\Http\Controllers\HomeController::cl
 Route::get('/customer/users/support_ticket', [App\Http\Controllers\HomeController::class, 'support_ticket'])->name('support_ticket');
 
 Route::get('/customer/users/user_profile', [App\Http\Controllers\HomeController::class, 'user_profile'])->name('user_profile');
-Route::get('/customer/users/update_profile', [App\Http\Controllers\HomeController::class, 'update_profile'])->name('update_profile');
+
+Route::post('/customer/users/update_profile/{id}', [App\Http\Controllers\HomeController::class, 'update_profile'])->name('update_profile');
+
+Route::get('/customer/users/edit_profile/{reg_number}', [App\Http\Controllers\HomeController::class, 'edit_profile'])->name('edit_profile');
+
+Route::get('/customer/users/referral_link', [App\Http\Controllers\HomeController::class, 'referral_link'])->name('referral_link');
+
+Route::get('/logins', [App\Http\Controllers\HomeController::class, 'registers'])->name('registers');

@@ -33,13 +33,13 @@
 
                         </div>
                           <h3 class="center-align" style="color: #07097f">Signup</h3>
-                       <form action="{{ route('register') }}">
+                       <form method="POST" action="{{ route('register') }}">
                            @csrf
                             <div class="row">
                                 <div class="input-field col s6">
                                 <input
-                                    id="firstname" 
-                                    type="text" 
+                                    id="firstname"
+                                    type="text"
                                     name="firstname" class="validate
                                     @error('firstname') is-invalid @enderror"
                                     value="{{ old('firstname') }}">
@@ -52,9 +52,9 @@
                                 </div>
                                 <div class="input-field col s6">
                                 <input
-                                    id="lastname" 
-                                    type="text" 
-                                    name="lastname" class="validate 
+                                    id="lastname"
+                                    type="text"
+                                    name="lastname" class="validate
                                     @error('lastname') is-invalid @enderror"
                                     value="{{ old('firstname') }}">
                                     <label for="lastname">{{ __('Last Name') }}</label>
@@ -68,9 +68,9 @@
                             <div class="row">
                                 <div class="input-field col s6">
                                 <input
-                                    id="username" 
-                                    type="text" 
-                                    name="username" class="validate 
+                                    id="username"
+                                    type="text"
+                                    name="username" class="validate
                                     @error('username') is-invalid @enderror"
                                     value="{{ old('username') }}">
                                     <label for="username">{{ __('Username') }}</label>
@@ -82,9 +82,9 @@
                                 </div>
                                 <div class="input-field col s6">
                                 <input
-                                    id="email" 
-                                    type="email" 
-                                    name="email" class="validate 
+                                    id="email"
+                                    type="email"
+                                    name="email" class="validate
                                     @error('email') is-invalid @enderror"
                                     value="{{ old('email') }}">
                                     <label for="email">{{ __('Email') }}</label>
@@ -98,9 +98,9 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                 <input
-                                    id="password" 
-                                    type="password" 
-                                    name="password" class="validate 
+                                    id="password"
+                                    type="password"
+                                    name="password" class="validate
                                     @error('password') is-invalid @enderror"
                                     value="{{ old('password') }}">
                                     <label for="password">{{ __('Password') }}</label>
@@ -114,9 +114,9 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                 <input
-                                    id="password_confirmation" 
-                                    type="password" 
-                                    name="password_confirmation" class="validate 
+                                    id="password_confirmation"
+                                    type="password"
+                                    name="password_confirmation" class="validate
                                     @error('password_confirmation') is-invalid @enderror"
                                     value="{{ old('password_confirmation') }}">
                                     <label for="password_confirmation">{{ __('Password Confirmation') }}</label>
@@ -145,9 +145,9 @@
                                 </div>
                                 <div class="input-field col s6">
                                 <input
-                                    id="phone" 
-                                    type="number" 
-                                    name="phone" class="validate 
+                                    id="phone"
+                                    type="number"
+                                    name="phone" class="validate
                                     @error('phone') is-invalid @enderror"
                                     value="{{ old('phone') }}">
                                     <label for="phone">{{ __('Phone Number') }}</label>
@@ -165,7 +165,7 @@
                             @endphp
 
                             <div class="col-md-6">
-                                <input id="reg_number" type="hidden" class="form-control" name="reg_number" value="{{ $reg_number }}">
+                                <input id="reg_number" type="text" class="form-control" name="reg_number" value="{{ $reg_number }}">
                             </div>
                         </div>
 

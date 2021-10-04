@@ -22,14 +22,16 @@
       <div class="card-header bg-success">
         <span class="card-title float-left text-white">REGISTRATION DETAILS</span>
         <div class="card-tools float-right">
-          <a href="/customer/users/update_profile" class="btn btn-block btn-danger btn-sm">Change Details</a>
+        @foreach ($allUsers as $user)
+          <a href="{{ route('edit_profile', $user->id) }}" class="btn btn-block btn-danger btn-sm">Change Details</a>
+        @endforeach
         </div>
       </div>
     <div class="card-body card-profile">
       <div class="text-center">
          <img class="rounded-circle" src="{{ asset('images/avatar.jpg') }}" height="150px" width="150px" alt="User profile picture">
       </div>
-      <h3 class="profile-username text-center text-white py-2">{{ Auth::user()->name }}</h3>
+      <h3 class="profile-username text-center text-white py-2">{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</h3>
 
       <ul class="list-group list-group-unbordered">
         <li class="list-group-item">
@@ -50,9 +52,9 @@
         <li class="list-group-item">
           <b>Invited By:</b> <span class="float-right">{{ Auth::user()->referrer->name ?? 'Not Specified' }} &nbsp; <a href="mailto:jepoon02@gmail.com">{{ Auth::user()->referrer->email ?? '' }}</a></span>
         </li>
-      </ul>  
+      </ul>
     </div>
-     </div> 
+     </div>
    <!-- /.card -->
   </div>
 </div>
