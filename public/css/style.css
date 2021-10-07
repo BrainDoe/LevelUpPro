@@ -20,6 +20,14 @@
     color: #c1c1c1;
 }
 
+.side-nav-menu-item.active {
+    background-color: #38c172 !important;
+}
+
+.side-nav-menu-item .side-nav-menu-link {
+    color: #fff !important;
+}
+
 /* Navar Section */
 
 .navbar .border-bottom {
@@ -336,6 +344,7 @@ h6.heading-advantage {
 .box-body {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
+    max-width: 100%;
 }
 
 .btn-app {
@@ -343,6 +352,7 @@ h6.heading-advantage {
     color: #fff !important;
     padding: 15px 5px;
     margin: 0px 10px;
+    font-size: 0.6rem;
 }
 
 .info-box {

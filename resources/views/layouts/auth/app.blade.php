@@ -27,5 +27,30 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
    <!-- Compiled and minified JavaScript -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+  <script>
+   @if(Session::has('message'))
+   var type = "{{ Session::get('alert-type','info') }}"
+   switch(type){
+      case 'info':
+      toastr.info(" {{ Session::get('message') }} ");
+      break;
+  
+      case 'success':
+      toastr.success(" {{ Session::get('message') }} ");
+      break;
+  
+      case 'warning':
+      toastr.warning(" {{ Session::get('message') }} ");
+      break;
+  
+      case 'error':
+      toastr.error(" {{ Session::get('message') }} ");
+      break; 
+   }
+   @endif 
+  </script>
 </body>
 </html>

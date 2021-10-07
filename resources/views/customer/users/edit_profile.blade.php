@@ -22,6 +22,8 @@
               </div>
               <!-- /.card-header -->
               <form action="{{ route('update_profile', $editprofile->id) }}"  enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                    @csrf
+                    @method('POST')
               <div class="card-body row">
                  <div class="col-md-6">
                   <!-- text input -->
@@ -50,7 +52,7 @@
                     <label>Country</label>
                     <div class="input select">
                         <select name="country" class="form-control" required="required" id="UserCountry">
-                            <option value="">Select Country</option>
+                            <option value="{{ $editprofile->country}}">{{ $editprofile->country}}</option>
                             @foreach ($allCountry as $country)
                                 <option value="{{ $country }}">{{ $country }}</option>
                             @endforeach

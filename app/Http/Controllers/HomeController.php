@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use PragmaRX\Countries\Package\Countries;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Hash;
 
 
 class HomeController extends Controller
@@ -54,7 +56,6 @@ class HomeController extends Controller
     public function edit_profile($id)
     {
         $editprofile = User::find($id);
-
         $countries = new Countries();
 
         $allCountry =  $countries->all()->pluck('name.common')->toArray();
@@ -64,15 +65,78 @@ class HomeController extends Controller
         ]);
     }
 
-    public function update_profile(Request $request)
+    public function update_profile(Request $request, $id)
     {
-        $reg_number = Auth::user()->reg_number;
-        $user_editprofile = User::find($reg_number);
+        $updateUser = User::find($id);
 
-        return view('customer.users.edit_profile',[
-            'user_editprofile' => $user_editprofile
-        ]);
+       $image = $request->file('user_image');
+
+       $name_gen = hexdec(uniqid());
+       $img_ext = strtolower($image->getClientOriginalExtension());
+       $image_name = $name_gen.'.'.$img_ext;
+       $up_location = 'images/profile/';
+       $last_img = $up_location.$image_name;
+
+       $image->move($up_location, $image_name);
+
+        $updateUser->firstname = $request->firstname;
+        $updateUser->lastname = $request->lastname;
+        $updateUser->email = $request->email;
+        $updateUser->country = $request->country;
+        $updateUser->user_image = $last_img;
+
+        $updateUser->update();
+
+        $notification = array(
+         'message' => 'User Info Updated Successfully',
+         'alert-type' => 'success'
+         );
+
+        return redirect()->route('user_profile')
+            ->with($notification);
+
     }
+
+    public function view_password(){
+
+        return view('customer.users.view_password');
+
+
+
+    }
+
+    public function update_password(Request $request){
+
+         $validateData = $request->validate([
+            'oldpassword' => 'required',
+            'password' => 'required|confirmed',
+        ]);
+
+        $hashedPassword = Auth::user()->password;
+        if(Hash::check($request->oldpassword, $hashedPassword)){
+                $user = User::find(Auth::id());
+                $user->password = Hash::make($request->password);
+                $user->save();
+
+                $notification = array(
+                   'message' => 'User password Updated Successfully',
+                   'alert-type' => 'info'
+                 );
+                return redirect()->route('dashboard')
+                        ->with($notification);
+        } else {
+            return redirect()->back();
+        }
+
+    }
+
+    public function email_setting(){
+        return view('customer.users.email_setting');
+    }
+
+
+
+
 
     public function registers()
     {

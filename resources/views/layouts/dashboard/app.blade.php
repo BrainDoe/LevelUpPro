@@ -3,7 +3,7 @@
 
 <head>
   <!-- Title -->
-  <title>Crypto - Dashboard | Nova - Responsive WebApp UI Kit</title>
+  <title>Levelup| Welcome to Levelup</title>
 
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">
@@ -16,7 +16,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
   <link href="{{ asset('backend/assets/vendor/nova-icons/nova-icons.css') }}" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
   <!-- CSS Implementing Libraries -->
@@ -32,6 +32,7 @@
    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 </head>
 
 <body class="has-sidebar has-fixed-sidebar-and-header bg-primary">
@@ -48,7 +49,7 @@
         </div>
         <!-- Footer -->
     </main>
-        @include('layouts.footer')
-@include('layouts.dashboard.script')
+    @include('layouts.footer')
+    @include('layouts.dashboard.script')
 </body>
 </html>

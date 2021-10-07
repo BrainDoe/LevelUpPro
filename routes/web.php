@@ -49,4 +49,10 @@ Route::get('/customer/users/edit_profile/{reg_number}', [App\Http\Controllers\Ho
 
 Route::get('/customer/users/referral_link', [App\Http\Controllers\HomeController::class, 'referral_link'])->name('referral_link');
 
+Route::get('/customer/users/view_password', [App\Http\Controllers\HomeController::class, 'view_password'])->name('view_password');
+
+Route::get('/customer/users/email_setting', [App\Http\Controllers\HomeController::class, 'email_setting'])->name('setting');
+
+Route::post('/customer/users/update_password', [App\Http\Controllers\HomeController::class, 'update_password'])->name('update_password');
+
 Route::get('/logins', [App\Http\Controllers\HomeController::class, 'registers'])->name('registers');
