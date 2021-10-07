@@ -15,6 +15,9 @@
   </div>
 </div>
 <div class="row">
+        @php
+           $user = DB::table('users')->where('id', Auth::user()->id)->first()
+        @endphp
    <!-- left column -->
    <div class="col-md-6 mx-auto">
     <!-- general form elements -->
@@ -22,14 +25,20 @@
       <div class="card-header bg-success">
         <span class="card-title float-left text-white">REGISTRATION DETAILS</span>
         <div class="card-tools float-right">
-          <a href="/customer/users/update_profile" class="btn btn-block btn-danger btn-sm">Change Details</a>
+          <a href="{{ route('edit_profile', $user->id) }}" class="btn btn-block btn-danger btn-sm">Change Details</a>
         </div>
       </div>
     <div class="card-body card-profile">
+        @if ($message = Session::get('success'))
+            <div class="alert alert-success">
+                <strong>{{ $message }}</strong>
+            </div>
+        @endif
+        
       <div class="text-center">
-         <img class="rounded-circle" src="{{ asset('images/avatar.jpg') }}" height="150px" width="150px" alt="User profile picture">
+<img class="rounded-circle" src="{{ (!empty($user->user_image)) ? url($user->user_image):asset('images/avatar.jpg') }}" height="150px" width="150px" alt="User profile picture">
       </div>
-      <h3 class="profile-username text-center text-white py-2">{{ Auth::user()->name }}</h3>
+      <h3 class="profile-username text-center text-white py-2">{{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</h3>
 
       <ul class="list-group list-group-unbordered">
         <li class="list-group-item">
@@ -48,11 +57,11 @@
           <strong>Phone:</strong> <a class="float-right">{{ Auth::user()->phone }}</a>
         </li>
         <li class="list-group-item">
-          <b>Invited By:</b> <span class="float-right">{{ Auth::user()->referrer->name ?? 'Not Specified' }} &nbsp; <a href="mailto:jepoon02@gmail.com">{{ Auth::user()->referrer->email ?? '' }}</a></span>
+          <b>Invited By:</b> <span class="float-right">{{ Auth::user()->referrer->username ?? 'Not Specified' }} &nbsp; <a href="#" class="text-white">{{ Auth::user()->referrer->email ?? '' }}</a></span>
         </li>
-      </ul>  
+      </ul>
     </div>
-     </div> 
+     </div>
    <!-- /.card -->
   </div>
 </div>

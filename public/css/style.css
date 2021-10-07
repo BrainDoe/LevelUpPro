@@ -11,13 +11,21 @@
 
 .link-sidebar {
     text-decoration: none !important;
-    font-family:'Montserrat', 'sans-serif';
+    font-family: "Montserrat", "sans-serif";
     font-weight: 400;
-    font-size: .8rem !important;
+    font-size: 0.8rem !important;
 }
 
 .link-sidebar:hover {
     color: #c1c1c1;
+}
+
+.side-nav-menu-item.active {
+    background-color: #38c172 !important;
+}
+
+.side-nav-menu-item .side-nav-menu-link {
+    color: #fff !important;
 }
 
 /* Navar Section */
@@ -269,6 +277,9 @@ h6.heading-advantage {
     border-top: 5px solid #0a753b !important;
     text-align: center !important;
 }
+.border_outline {
+    border-top: 5px solid #0a753b !important;
+}
 
 /* ////// */
 /* How it works */
@@ -316,6 +327,14 @@ h6.heading-advantage {
     border-left: 5px solid #0a753b;
     box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
 }
+.callout-info {
+    border-radius: 0.25rem;
+    background-color: #07097f;
+    color: #fff;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    border-left: 5px solid #0a753b;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%);
+}
 
 .countdown-display {
     border: 2px solid #dc3545;
@@ -325,6 +344,7 @@ h6.heading-advantage {
 .box-body {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
+    max-width: 100%;
 }
 
 .btn-app {
@@ -332,6 +352,7 @@ h6.heading-advantage {
     color: #fff !important;
     padding: 15px 5px;
     margin: 0px 10px;
+    font-size: 0.6rem;
 }
 
 .info-box {
@@ -359,6 +380,14 @@ h6.heading-advantage {
     justify-content: center;
 }
 
+.small-box {
+    border-radius: 0.25rem;
+    box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+}
 /* Profile */
 .list-group-item {
     background-color: #07097f !important;
@@ -381,15 +410,37 @@ h6.heading-advantage {
     color: #fff;
 }
 
-input[type=text]:not(.browser-default).validate+label,
-input[type=email]:not(.browser-default).validate+label,
-input[type=number]:not(.browser-default).validate+label,
-input[type=password]:not(.browser-default).validate+label {
-    color: #07097f !important;
+.btn-submit:focus {
+    background-color: #07097fa1 !important;
 }
-.btn-submit:hover{
-    background-color: #dc3546d0;
-    transition: all .2sm ease-in-out;
+
+.small-box .icon {
+    transition: all 0.3s linear;
+    position: absolute;
+    top: -2px;
+    right: 50px;
+    z-index: 0;
+    font-size: 90px;
+    color: rgba(0, 0, 0, 0.15);
+}
+
+.small-box > .small-box-footer {
+    position: relative;
+    text-align: center;
+    padding: 3px 0;
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    background-color: #dc3545;
+}
+
+.alert-danger {
+    /* color: #842029; */
+    background-color: #fd452c !important;
+    border-color: #fd452c !important;
 }
 
 /* Media Query on 790px*/

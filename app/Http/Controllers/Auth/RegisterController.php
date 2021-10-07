@@ -53,7 +53,8 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'firstname' => ['required', 'string', 'max:255'],
-            'lastlast' => ['required', 'string', 'max:255'],
+            'lastname' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'country' => ['required'],
@@ -70,17 +71,14 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        // $check_reg_num = User::find($reg_number);
-
-        // $url = $request->url();
-        // dd($url);
 
         $referrer = User::where('reg_number', (session()->pull('referrer')))->first();
 
 
         return User::create([
-            'first' => $data['first'],
-            'last' => $data['last'],
+            'firstname' => $data['firstname'],
+            'lastname' => $data['lastname'],
+            'username' => $data['username'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'country' => $data['country'],
